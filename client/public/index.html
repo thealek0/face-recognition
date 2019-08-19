@@ -8,10 +8,48 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Title</h1>
-    <p>description</p>
-    <video id="videoPlayer" width="720" height="480" autoplay="true">
-    </video>
+    <section>
+      <h1>Recognition</h1>
+      <p>
+        <button id="start" onclick="stream()">Start stream</button>
+        <span>FPS:</span>
+        <select title="fps" name="fps" onchange="changeFps(value)">
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="8">8</option>
+            <option value="16">16</option>
+            <option value="24">24</option>
+        </select>
+        <span>or</span>
+        <button id="once" onclick="once()">Take once</button>
+        <span>or</span>
+        <input type="file" name="image" id="upload-file" onchange="upload(this.files)" accept=".jpg, .jpeg, .png">
+        <p>
+          <input id="label" type="text">
+          <button id="once" onclick="addLabel()">Add label</button>
+        </p>
+      </p>
+    
+      <section class="row">
+        <!-- <div class="column">
+          <h1>Input:</h1>
+        </div> -->
+        <div class="column">
+          <video id="video" width="720" height="480"  ></video>
+          <h1>Output: 
+            <span id="label-result"></span>
+          </h1>
+          <!-- <pre id="result"></pre> -->
+          <canvas id="image-result">
+        </div>
+      </section>
+
+      <!-- <section>
+        <h1>Labeling</h1>
+        
+      </section> -->
+    </section>
     <script src="/js/index.js"></script>
   </body>
 </html>

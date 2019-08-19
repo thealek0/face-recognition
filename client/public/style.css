@@ -9,5 +9,25 @@ a {
 }
 
 video {
-  background: darkblue;
+  /* background: darkblue; */
+  display: none;
+}
+
+
+button,
+select,
+input {
+  font-size: 1.5em;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+#label-result {
+  color: darkred;
 }

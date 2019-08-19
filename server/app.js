@@ -2,6 +2,7 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
+const fileUpload = require('express-fileupload');
 
 const indexRouter = require('./routes/index');
 const apiRouter = require('./routes/api');
@@ -20,6 +21,8 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Credentials', true);
   next();
 });
+
+app.use(fileUpload());
 
 app.use('/', indexRouter);
 app.use('/api', apiRouter);

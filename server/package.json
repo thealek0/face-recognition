@@ -1,15 +1,20 @@
 {
-  "name": "face-recognition",
+  "name": "face-recognizer",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "@tensorflow/tfjs-node": "^1.2.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "express-fileupload": "^1.1.5",
+    "face-api.js": "^0.20.1",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "opencv4nodejs": "^5.1.0",
+    "winston": "^3.2.1"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
